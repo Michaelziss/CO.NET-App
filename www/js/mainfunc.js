@@ -10,7 +10,7 @@
     // einstiegspunkt
     window.onload = token; 
 
-
+function aller(){alert('mainfunc');}
   // ####################################################
   // ## legt die ankommende xml in eine string variable
   // ####################################################
