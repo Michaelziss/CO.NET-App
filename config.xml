@@ -9,7 +9,6 @@
 <plugin name="cordova-plugin-whitelist" spec="1.2.2"/>
 <content src="index.html" />
 <access origin="*" />
-<access origin="http://192.168.178.100/" />
 <allow-intent href="http://*/*" />
 <allow-intent href="https://*/*" />
 <allow-intent href="tel:*" />
