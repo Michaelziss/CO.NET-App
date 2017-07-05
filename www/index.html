@@ -7,55 +7,7 @@
     
     <script type="text/javascript" charset="utf-8">
         
-    var positionnow;
-    var image;
-    var pictureSource;   // picture source
-    var destinationType; // sets the format of returned value 
-
-    document.addEventListener("deviceready",onDeviceReady,false);
-
-    // Cordova is ready to be used!
-    //
-    function onDeviceReady() {
-        pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
-    }
-
-    // Called when a photo is successfully retrieved
-    //
-    function onPhotoDataSuccess(imageData) {
-
-      var smallImage = document.getElementById('smallImage');
-      smallImage.style.display = 'block';
-      smallImage.src = "data:image/jpeg;base64," + imageData;
-         image= imageData;
-    }
-    // A button will call this function
-    //
-    function capturePhoto() {
-        getlocation();
-      // Take picture using device camera and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-        destinationType: destinationType.DATA_URL });
-    }
-    // Called if something bad happens.
-    // 
-    function onFail(message) {
-      alert('Failed because: ' + message);
-    }
-    function getlocation()
-    {
-        navigator.geolocation.getCurrentPosition
-        (onlocationSuccess);
-    }
-    function onlocationSuccess(position)
-    {
-          Latitude = position.coords.latitude;
-          Longitude = position.coords.longitude;
-          positime= position.timestamp;
-          positionnow = Latitude+':'+Longitude+':'+positime;
-       
-    }
+    
       </script>
 <html>
     <head>
