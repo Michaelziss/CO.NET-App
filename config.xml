@@ -13,6 +13,7 @@
 <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value=" "/>
 </plugin>
 <plugin name="cordova-plugin-compat" spec="1.0.0"/>
+<plugin name="cordova-plugin-geolocation" spec="2.2.0"/>
 <content src="index.html" />
 <access origin="*" />
 <access origin="http://127.0.0.1*"/>
