@@ -10,7 +10,7 @@
     // einstiegspunkt
     window.onload = token; 
 
-function aller(){alert('mainfunc');}
+
   // ####################################################
   // ## legt die ankommende xml in eine string variable
   // ####################################################
@@ -90,35 +90,26 @@ function token(a=0)
       // ###############################################################################
       $('#answer').empty();
       if(a==1){$('#answer').append('<h1><center>Falsche Login-Daten');}
-      $('#answer').append('<center><form method="POST" action="">'
-                               +'<table>'
-                               +'  <tbody>'
-                               +'    <tr>'
-                               +'      <th>'
-                               +'        <label for="login">Benutzer</label>'
-                               +'      </th>'
-                               +'      <td>'
-                               +'        <input id="login" name="login">'
-                               +'      </td>'
-                               +'    </tr>'
-                               +'    <tr>'
-                               +'      <th>'
-                               +'        <label for="pass">Passwort</label>'
-                               +'      </th>'
-                               +'        <td>'
-                               +'          <input id="pass" name="pass" type="password">'
-                               +'        </td>'
-                               +'      </tr>'
-                               +'        <tr>'
-                               +'          <td>'
-                               +'        </td>'
-                               +'        <td>'
-                               +'          <input type="button" value="Login" onclick="getToken();" />'
-                               +'        </td>'
-                               +'      </tr>'
-                               +'    </tbody>'
-                               +'  </table>'
-                               +'</form>');
+      $('#answer').append('<center>'
+                    +'    <div class="container">'
+                    +'        <div class="row">'
+                    +'            <div class="col-md-offset-5 col-md-3">'
+                    +'                <div class="form-login">'
+                    +'                    <h4>Bitte loggen sie sich ein</h4>'
+                    +'                    <input type="text" id="userName" class="form-control input-sm chat-input" placeholder=" Nutzer Name" />'
+                    +'                    </br>'
+                    +'                    <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder=" Password" />'
+                    +'                    </br>'
+                    +'                        <div class="wrapper">'
+                    +'                        <span class="group-btn">     '
+                    +'                           <input type="button" class="btn btn-primary btn-md" value="Login" onclick="getToken();" /> '
+                    +'                        </span>'
+                    +'                        </div>'
+                    +'                    </div>'
+                    +'                </div>'
+                    +'            </div>'
+                    +'        </div>'
+                         );
     
     }
     else
