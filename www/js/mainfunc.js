@@ -91,12 +91,12 @@ function token(a=0)
       $('#answer').empty();
       if(a==1){$('#answer').append('<h1><center>Falsche Login-Daten');}
       $('#answer').append('<center>'
-                    +'    <div class="container">'
+                    +'    <div class="container"  style="position: absolute; left: 30%; top: 20%;">'
                     +'        <div class="row">'
                     +'            <div class="col-md-offset-5 col-md-3">'
                     +'                <div class="form-login">'
                     +'                    <h4>Bitte loggen sie sich ein</h4>'
-                    +'                    <input type="text" id="userName" class="form-control input-sm chat-input" placeholder=" Nutzer Name" />'
+                    +'                    <input type="text" id="userName" class="form-control input-sm chat-input" placeholder=" Nutzername" />'
                     +'                    </br>'
                     +'                    <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder=" Password" />'
                     +'                    </br>'

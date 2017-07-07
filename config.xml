@@ -19,5 +19,10 @@
 <access origin="http://127.0.0.1*"/>
 <access origin="http://192.168.178.100" subdomains="true" />
 <access origin="http://*.phonegap.com"/>
+<splash platform="android" src="package-assets/splash.png" density="xhdpi" width="720" height="960" orientation="portrait"/>
+<icon platform="android" src="package-assets/logo_36.png" density="ldpi" width="36" height="36"/>
+<icon platform="android" src="package-assets/logo_48.png" density="mdpi" width="48" height="48"/>
+<icon platform="android" src="package-assets/logo_72.png" density="hdpi" width="72" height="72"/>
+<icon platform="android" src="package-assets/logo_96.png" density="xhdpi" width="96" height="96"/>
 <log level="DEBUG"/>
 </widget>
