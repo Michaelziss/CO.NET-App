@@ -11,6 +11,7 @@
     window.onload = token; 
 
 
+
   // ####################################################
   // ## legt die ankommende xml in eine string variable
   // ####################################################
@@ -83,7 +84,7 @@ function getFunction()
 }
 function token(a=0)
 {
-    if(localStorage.getItem('Token') == 'false' || localStorage.getItem('Token') == null)
+    if(localStorage.getItem('Token') == 'false' || localStorage.getItem('Token') == null || localStorage.getItem('Token') == '')
     {
       // ###############################################################################
       // ## abrufen und einbinden neuer funktionen
@@ -96,9 +97,9 @@ function token(a=0)
                     +'            <div class="col-md-offset-5 col-md-3">'
                     +'                <div class="form-login">'
                     +'                    <h4>Bitte loggen sie sich ein</h4>'
-                    +'                    <input type="text" id="login" class="form-control input-sm chat-input" placeholder=" Nutzername" name="login"/>'
+                    +'                    <input type="text" id="login" class="form-control input-sm chat-input" placeholder="Nutzername" name="login"/>'
                     +'                    </br>'
-                    +'                    <input type="password" id="pass" class="form-control input-sm chat-input" placeholder=" Password" name="pass"/>'
+                    +'                    <input type="password" id="pass" class="form-control input-sm chat-input" placeholder="Password" name="pass"/>'
                     +'                    </br>'
                     +'                        <div class="wrapper">'
                     +'                        <span class="group-btn">     '
@@ -108,7 +109,7 @@ function token(a=0)
                     +'                    </div>'
                     +'                </div>'
                     +'            </div>'
-                    +'        </div>'
+                    +'        </div></form>'
                          );
     
     }
@@ -119,9 +120,19 @@ function token(a=0)
 }
 function getToken()
   {
+    if(document.getElementById("login").value ==='' || document.getElementById("pass").value ==='')
+      {
+        $('#footer').empty();
+        $('#footer').append('<h1><center><font color="red">Bitte geben Ihre Daten ein</font>'); 
+        token(); 
+        return false;
+      }
+      $('#footer').empty();
+      $('#answer').append('<h1><center>Anmeldung läuft');
     // ###############################################################################
     // ## instanzierung und öffnen der verbindung zum soapserver
     // ###############################################################################
+    console.log(document.getElementById("pass").value);
     var xhr      = new XMLHttpRequest();
     var userlog  = btoa(document.getElementById("login").value);
     var passlog  = btoa(document.getElementById("pass").value);
